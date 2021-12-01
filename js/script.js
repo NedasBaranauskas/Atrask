@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }).addTo(map);
 
     L.marker([54.687157, 25.279652]).addTo(map).on('click', onClick);
+
+    fetch('./../data/markers.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.markers[0].name);
+        document.getElementById("testH2").innerText = data.markers[0].name;
+    });
+
+
 });
 
 

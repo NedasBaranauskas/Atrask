@@ -1,0 +1,53 @@
+{
+    "markers":[
+        {
+
+            "name":"Parkas1",
+
+            "lat":25.8986,
+
+            "lon":14.5687,
+
+            "info":"lorem ipsum",
+
+            "pictures":[
+
+                "/images/picture1.png","/images/picture2.png","/images/picture3.png"
+
+            ],
+
+            "category":"park",
+
+            "thumbnail":"/images/tpicture.png",
+
+            "rating":5
+
+        },
+
+        {
+
+            "name":"Parkas1",
+
+            "lat":25.8986,
+
+            "lon":14.5687,
+
+            "info":"lorem ipsum",
+
+            "pictures":[
+
+                "/images/picture1.png","/images/picture2.png","/images/picture3.png"
+
+            ],
+
+            "category":"park",
+
+            "thumbnail":"/images/tpicture.png",
+
+            "rating":5
+
+        }
+
+    ]
+
+}
