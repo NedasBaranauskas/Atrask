@@ -37,3 +37,28 @@ function onClick(e) {
 function addMarker(map,lat,lon){
     L.marker([lat,lon]).addTo(map).on('click', onClick);
 }
+
+function addPlace(){
+    var modal = document.getElementById("langas");
+    // var dezute = document.getElementById("deze");
+    var btn = document.getElementById("mygtukas");
+
+    var span = document.getElementsByClassName("close")[0];
+    var submitt = document.getElementById("submitas");
+
+modal.style.display = "block";
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+submitt.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}

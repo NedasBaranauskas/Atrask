@@ -28,7 +28,7 @@ transition: all 0.3s ease;
     background:rgb(236, 236, 236);
     user-select: none;
 }
-.sidebar ul a{
+.sidebar ul a, #mygtukas{
     
     display:  block;
     height: auto;
@@ -42,8 +42,9 @@ transition: all 0.3s ease;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-ul li:hover a{
+ul li:hover a, #mygtukas:hover{
     padding-left: 50px;
+    cursor: pointer;
 }
 #check{
     display: none;
@@ -120,7 +121,7 @@ transition: all 0.3s ease;
 label #close2{
         position: absolute;
         cursor: pointer;
-        
+
     }
 label #close2{
     /*background-color: white;*/
@@ -149,3 +150,74 @@ label #close2{
     width: 100%;
     height: auto;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    font-family: Calibri;
+  }
+  .modal-header {
+    padding: 10px 16px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+  }
+  .modal-body {padding: 10px 10px;}
+  .modal-content {
+    position: relative;
+    background-color: #e5e5e5;
+    margin: 10% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);  
+    border-radius: 10px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .spaust {
+    margin: 10px 10px;
+  }
+  .spaust:hover,
+  .spaust:focus {
+    color:red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .spaustbg {
+    background-color: #9D9C9C;
+    padding: 2px;
+  }
+  #desc {
+    resize: none;
+  }
+  #submitas {
+    height: 25px;
+    width: 100px;
+  }
+  #submitas:hover {
+    cursor:pointer;
+    font-weight: bold;
+  }
