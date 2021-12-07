@@ -55,10 +55,13 @@ label #menu,label #close{
     }
 label #menu{
     z-index: 5;
-    right: 40px;
-    top: 25px;
+    right: 20px;
+    top: 15px;
     font-size: 25px;
     color: black;
+    background:rgb(236, 236, 236);
+    padding: 6px 10px;
+    border-radius: 3px;
 }
 label #close{
     z-index: 9;
@@ -127,6 +130,10 @@ label #close2{
     font-size: 30px;
     color: black;
     transition: all 0.3s ease;
+    background:rgb(236, 236, 236);
+    padding: 1px 5px;
+    border-radius: 3px;
+    opacity: 75%;
 }
 #check2:checked ~ .infobar{
     left: 0;
