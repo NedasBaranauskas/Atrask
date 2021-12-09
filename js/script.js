@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-   addMarker(map,54.687157, 25.279652);
+    //addMarker(map,54.687157, 25.279652);
     //addMarker(map,0);
     //L.marker([54.687157, 25.279652]).addTo(map).on('click', onClick);
 
@@ -18,24 +18,55 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("name1").innerText = data.markers[0].name;
     });
 
+    for (let i = 0; i < 2; i++) {
     
-
+      fetch('./../data/markers.json')
+      .then(response => response.json())
+      .then(data => {
+          console.log(data.markers[i].coords);
+          addMarker(map,data.markers[i].coords[0],data.markers[i].coords[1],i);
+      });
+    //  addMarker(map,lat,lon);
+    }
 
 });
 
-function onClick(e) {
+const onClick = (index) => {
+  return (e) => {
     // alert(e.latlng);
     
-    document.getElementById("check2").checked=true;
-  //  document.getElementById("name").innerText=name;
-  //  document.getElementById("info").innerText=info;
-  //  document.getElementById("category").innerText=category;
-  //  document.getElementById("thumbnail").src=image;
+    fetch('./../data/markers.json')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.markers[index]);
+      document.getElementById("name").innerText=data.markers[index].name
+    });
+  
+    fetch('./../data/markers.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("info").innerText=data.markers[index].info
+    });
+  
+    fetch('./../data/markers.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("category").innerText=data.markers[index].category
+    });
+  
+    fetch('./../data/markers.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("thumbnail").src=data.markers[index].thumbnail
+    });
+  
 
+    document.getElementById("check2").checked=true;
+}
 }
 
-function addMarker(map,lat,lon){
-    L.marker([lat,lon]).addTo(map).on('click', onClick);
+function addMarker(map,lat,lon,index){
+    L.marker([lat,lon]).addTo(map).addEventListener('click', onClick(index));
 }
 
 function addPlace(){
