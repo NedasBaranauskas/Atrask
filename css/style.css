@@ -146,7 +146,7 @@ label #close2{
 #check2:checked ~ label #close2{
     left: 345;
 }
-.infobar header img{
+.infobar img{
     width: 100%;
     height: auto;
 }

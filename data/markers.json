@@ -1,7 +1,7 @@
 {
     "markers":[
         {
-            "name":"Parkas1",
+            "name":"Parkas",
             "coords":[
                     54.687157,25.279652
             ],
@@ -10,11 +10,11 @@
                 "/images/picture1.png","/images/picture2.png","/images/picture3.png"
             ],
             "category":"park",
-            "thumbnail":"/images/tpicture.jpg",
+            "thumbnail":"/images/tpicture1.jpg",
             "rating":5
         },
         {
-            "name":"Parkas2",
+            "name":"Paminklas",
             "coords":[
                 25.8986,14.5687
             ],
@@ -23,7 +23,7 @@
                 "/images/picture1.png","/images/picture2.png","/images/picture3.png"
             ],
             "category":"monument",
-            "thumbnail":"/images/tpicture.jpg",
+            "thumbnail":"/images/tpicture2.jpg",
             "rating":5
         }
     ]
