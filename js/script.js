@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .then(data => {
         console.log(data);
         console.log(data.markers[0].name);
-        document.getElementById("name1").innerText = data.markers[0].name;
     });
 
     for (let i = 0; i < 2; i++) {
@@ -39,27 +38,11 @@ const onClick = (index) => {
     .then(response => response.json())
     .then(data => {
       console.log(data.markers[index]);
-      document.getElementById("name").innerText=data.markers[index].name
+      document.getElementById("name").innerText=data.markers[index].name;
+      document.getElementById("info").innerText=data.markers[index].info;
+      document.getElementById("category").innerText=data.markers[index].category;
+      document.getElementById("thumbnail").src=data.markers[index].thumbnail;
     });
-  
-    fetch('./../data/markers.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("info").innerText=data.markers[index].info
-    });
-  
-    fetch('./../data/markers.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("category").innerText=data.markers[index].category
-    });
-  
-    fetch('./../data/markers.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("thumbnail").src=data.markers[index].thumbnail
-    });
-  
 
     document.getElementById("check2").checked=true;
 }
