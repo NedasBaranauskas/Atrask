@@ -14,8 +14,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .sidebar{
 position: fixed;
 z-index: 6;
-right: -250px;
-width: 250px;
+right: -300px;
+width: 300px;
 height: 100%;
 background: rgb(236, 236, 236);
 transition: all 0.3s ease;
@@ -27,6 +27,7 @@ transition: all 0.3s ease;
     line-height: 70px;
     background:rgb(236, 236, 236);
     user-select: none;
+    background-color: #8795ab;
 }
 .sidebar ul a, #mygtukas{
     
@@ -34,13 +35,43 @@ transition: all 0.3s ease;
     height: auto;
     width: auto;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
-    padding-left: 40px;
+    padding-left: 20px;
     box-sizing: border-box;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+}
+.sidebar #mygtukas:before{
+  font-family: FontAwesome;
+    content: "\f5a0";
+    left: 12;
+    padding-right: 10px;
+}
+.sidebar #profilis:before{
+  font-family: FontAwesome;
+    content: "\f007";
+    left: 12;
+    padding-right: 10px;
+}
+.sidebar #vietoves:before{
+  font-family: FontAwesome;
+    content: "\f02e";
+    left: 12;
+    padding-right: 10px;
+}
+.sidebar #issukiai:before{
+  font-family: FontAwesome;
+    content: "\f128";
+    left: 12;
+    padding-right: 10px;
+}
+.sidebar #atsijungti:before{
+  font-family: FontAwesome;
+    content: "\f2f5";
+    left: 12;
+    padding-right: 10px;
 }
 ul li:hover a, #mygtukas:hover{
     padding-left: 50px;
@@ -80,7 +111,7 @@ label #close{
     pointer-events: none;
 }
 #check:checked ~ label #close{
-    right: 195;
+    right: 250;
 }
 
 .infobar{
@@ -161,25 +192,71 @@ label #close2{
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-    font-family: Calibri;
+    font-family: Verdana;
   }
   .modal-header {
     padding: 10px 16px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
   }
   .modal-body {padding: 10px 10px;}
   .modal-content {
     position: relative;
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     margin: 10% auto;
     padding: 0;
     border: 1px solid #888;
-    width: 50%;
+    width: 28%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);  
-    border-radius: 10px;
+    border-radius: 8px;
     animation-name: animatetop;
     animation-duration: 0.4s;
+  }
+  .modal h2, h3 {
+    font-weight: normal;
+    position: relative;
+    padding-left: 40px;
+  }
+  .modal input{
+    font-family:Verdana;
+    width:200px;
+    height:28px;
+    border: none;
+    border-bottom: 2px solid gray;
+    text-indent: 2px;
+  }
+  .modal input[type=submit]{
+    border: 2px solid #4d5a6e;
+    background-color: #8795ab;
+  }
+  .modal textarea{
+    font-family: Verdana;
+    width: 400px;
+    height: 100px;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding-left: 2px;
+    resize: none;
+    padding-top: 2px;
+  }
+
+  .modal h3:before{
+    font-family: FontAwesome;
+    content: "\f5a0";
+    position: absolute;
+    left: 0;
+  }
+  #photos:before{
+    font-family: FontAwesome;
+    content: "\f030";
+    position: absolute;
+    left: 0;
+  }
+  #photos{
+    font-weight: normal;
+    position: relative;
+    padding-left: 40px;
+    font-size: large;
   }
   @keyframes animatetop {
     from {top: -300px; opacity: 0}
@@ -201,23 +278,24 @@ label #close2{
     margin: 10px 10px;
   }
   .spaust:hover,
-  .spaust:focus {
-    color:red;
-    text-decoration: none;
+  .spaust:focus,
+  #photos:hover,
+  #photos:focus {
+    font-weight: bold;
+    text-decoration: underline;
     cursor: pointer;
   }
   .spaustbg {
-    background-color: #9D9C9C;
+    background-color: #8795ab;
     padding: 2px;
-  }
-  #desc {
-    resize: none;
   }
   #submitas {
     height: 25px;
     width: 100px;
+    border-radius: 5px;
   }
   #submitas:hover {
     cursor:pointer;
     font-weight: bold;
+    border-color: black;
   }

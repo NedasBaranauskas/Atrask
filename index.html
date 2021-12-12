@@ -13,7 +13,10 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
+    <script src="https://kit.fontawesome.com/ecc1b84669.js" crossorigin="anonymous"></script>
+
     <script src="./js/script.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -36,14 +39,14 @@
         <i class="fas fa-bars" id="menu"></i>
         <i class="fas fa-times" id="close"></i>
     </label>
-    <div class="sidebar">
-        <header>Atrask</header>
+    <div class="sidebar" style="font-family: Verdana;">
+        <header><b>Atrask</b></header>
         <ul>
-            <li><a href='#'><i></i>Mano profilis</a></li>
-            <li><a href='#'><i></i>Mano vietovės</a></li>
+            <li><a id="profilis" href='#'><i></i>Mano profilis</a></li>
+            <li><a id="vietoves" href='#'><i></i>Mano vietovės</a></li>
             <li id="mygtukas" onclick="addPlace()"><i></i>Pasiūlyti naują vietovę</li>
-            <li><a href='#'><i></i>Iššūkiai</a></li>
-            <li><a href='#'><i></i>Atsijungti</a></li>
+            <li><a id="issukiai" href='#'><i></i>Iššūkiai</a></li>
+            <li><a id="atsijungti" href='#'><i></i>Atsijungti</a></li>
         </ul>
     </div>
 
@@ -63,22 +66,21 @@
     <div id="langas" class="modal">
         <div id="deze" class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Add a place</h2>
+            <h2 style="text-align: center;"><b>Add a place</b><span class="close">&times;</span></h2>
           </div>
             <div class="spaustbg">
-              <h3 class="spaust">Choose location on the map</h3>
+              <h3 id="loc" class="spaust">Choose location on the map</h3>
             </div>
             <div class="modal-body">
-              <label for="vname">Name<br></label>
-              <input id="vname" name="vname" style="font-family:Calibri;width:200px;"><br><br>
-              <label for="desc">Description<br></label>
-              <textarea rows="5" cols="50" id="desc" name="desc" style="font-family:Calibri;"></textarea><br><br>
+              <label for="vname" style="padding: 2px;">Name<br></label>
+              <input id="vname" type="text" name="vname"><br><br>
+              <label for="desc" style="padding: 2px;">Description<br></label> 
+              <textarea id="desc" name="desc"></textarea>
             </div>
             <div class="spaustbg">
-              <h3 class="spaust">Upload photos</h3>
+              <h3 id="photos" class="spaust">Upload photos</h3>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="text-align: center;">
               <input type="submit" id="submitas" value="Submit">
             </div>
         </div>
