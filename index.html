@@ -23,7 +23,6 @@
    
 </head>
 <body>
-  <!--  <h2 id="testH2">Sveiki</h2> -->
      <div id="wrapper">
         <div id="google_map">
      
@@ -55,11 +54,26 @@
         <i class="fas fa-times" id="close2"></i>
     </label>
     
-    <div class="infobar">
-        <img id="thumbnail" src="images/tpicture1.jpg" ></img>
+    <div class="infobar" style="font-family: Verdana;">
+        <img id="thumbnail" src="images/tpicture1.jpg" ></img> <!--butu galima padaryt, kad paspaudus ant thumbnail atidarytu galerija-->
         <h2 id="name">Green Courtyard</h2>
-        <h3 id="category">park </h3>
-        <p id="info">Vivamus sed sodales lacus. Morbi faucibus iaculis sapien vel viverra. Mauris pharetra ornare tincidunt. Nullam quis ullamcorper urna, sit amet volutpat ligula. Sed non ante egestas, luctus felis pulvinar, suscipit risus. Praesent congue orci sed interdum euismod. Pellentesque vel tortor mattis, tincidunt ex ac, scelerisque ipsum. Cras tincidunt vel neque in hendrerit. Vestibulum non diam auctor, sagittis lectus eget, pulvinar tellus.</p>
+        
+        <div class="rating" id="rating">5.0</div>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+
+        <div id="catbox"><span id="category">park</span></div>
+        <p id="info">info</p>
     </div>
     <div id="map"></div>
 

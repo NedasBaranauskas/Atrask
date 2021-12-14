@@ -25,7 +25,6 @@ transition: all 0.3s ease;
     color: black;
     text-align: center;
     line-height: 70px;
-    background:rgb(236, 236, 236);
     user-select: none;
     background-color: #8795ab;
 }
@@ -122,6 +121,7 @@ width: 400px;
 height: 100%;
 background: rgb(236, 236, 236);
 transition: all 0.3s ease;
+overflow-y: auto;
 }
 .infobar header{
     font-size: 22px;
@@ -131,20 +131,79 @@ transition: all 0.3s ease;
     background:rgb(236, 236, 236);
     user-select: none;
 }
-.infobar ul a{
-    
-    display:  block;
-    height: auto;
-    width: auto;
-    line-height: 65px;
-    font-size: 20px;
-    color: black;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+
+.infobar #name{
+  
+  background-color:#8795ab;
+  text-align: center;
 }
+
+.rating{
+  float: right;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+
+
+.rate {
+  float: right;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+
+.infobar #catbox{
+  line-height: 46px;
+  padding-left: 15px;
+}
+
+.infobar #category{
+line-height: 46px;
+
+padding: 2px 5px;
+border-radius: 10px;
+font-size: 18px;
+;
+}
+
+.infobar #info{
+  text-indent: 25px;
+  }
+
+
 
 #check2{
     display: none;

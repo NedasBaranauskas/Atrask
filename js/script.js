@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //addMarker(map,0);
     //L.marker([54.687157, 25.279652]).addTo(map).on('click', onClick);
 
+    // document.getElementById("star3").checked=true;
+
     fetch('./../data/markers.json')
     .then(response => response.json())
     .then(data => {
@@ -40,8 +42,10 @@ const onClick = (index) => {
       console.log(data.markers[index]);
       document.getElementById("name").innerText=data.markers[index].name;
       document.getElementById("info").innerText=data.markers[index].info;
-      document.getElementById("category").innerText=data.markers[index].category;
+      document.getElementById("category").innerText=data.markers[index].category[0];
+      document.getElementById("category").style.background=data.markers[index].category[1];
       document.getElementById("thumbnail").src=data.markers[index].thumbnail;
+      document.getElementById("rating").innerText=data.markers[index].rating;
     });
 
     document.getElementById("check2").checked=true;
