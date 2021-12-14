@@ -12,7 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // document.getElementById("star3").checked=true;
 
-    fetch('./../data/markers.json')
+    fetch('http://localhost:5500/markers')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.markers[0].name);
+    });
+
+    fetch('http://localhost:5500/markerDetails?id=' + 2)
     .then(response => response.json())
     .then(data => {
         console.log(data);
